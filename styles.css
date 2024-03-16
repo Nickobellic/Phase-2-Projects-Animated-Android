@@ -1,13 +1,86 @@
 .android {
     width: 100%;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 
 .android-face {
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 150px 150px 0 0;
+    background-color: chartreuse;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.android-eye {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 20px;
+    align-self: center;
+    background-color: white;
+}
+
+.android-hl {
+    width: 25px;
+    height: 115px;
     background-color: chartreuse;
 }
+
+.android-lhand {
+    position: relative;
+    right: 100px;
+    top: 324px;
+    border-radius: 15px;
+}
+
+.android-rhand {
+    position: relative;
+    left: 100px;
+    top: 210px;
+    border-radius: 15px;
+}
+
+.android-legs {
+    display: flex;
+    flex-direction: row;
+}
+
+.android-lleg {
+    position: relative;
+    bottom: 67px;
+    right: 25px;
+    border-radius: 15px;
+}
+
+.android-rleg {
+    position: relative;
+    left: 20px;
+    bottom: 67px;
+    border-radius: 15px;
+}
+
+/*
+transition : => ease (Same Speed) , ease-in (Starting will be slow. Ending will be fast) , ease-in-out (Starting will be slow, middle will be fast), ease-out (Starting will be fast, ending will be slow)
+*/
+
+.android-body {
+    width: 150px;
+    height: 150px;
+    border-radius: 0 0 25px 25px;
+    background-color: chartreuse;
+}
+
+body {
+    background-color: black;
+}
+
