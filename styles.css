@@ -1,6 +1,5 @@
 .android {
-    width: 100%;
-    height: 80vh;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,7 +79,150 @@ transition : => ease (Same Speed) , ease-in (Starting will be slow. Ending will 
     background-color: chartreuse;
 }
 
+/* ANIMATIONS */
+
+.android:hover .android-eye {
+    animation:  normalColor 1s 0s infinite;
+    background: rgba(236,19,65,0.8);
+    box-shadow: 0px 0px 15px 0px rgba(236,19,65,1);
+}
+
+@keyframes changeEyeColor {
+    0% {
+        background: rgba(255,0,0,0.8);
+        box-shadow: 0px 0px 15px 0px rgba(255,0,0,1);
+    }
+
+    33% {
+        background: rgba(0,255,0,0.8);
+        box-shadow: 0px 0px 15px 0px rgba(0,255,0,1);
+    }
+
+    67% {
+        background: rgba(0,0,255,0.8);
+        box-shadow: 0px 0px 15px 0px rgba(0,0,255,1);
+    }
+
+    100% {
+        background: rgba(255,255,0,0.8);
+        box-shadow: 0px 0px 15px 0px rgba(255,255,0,1);
+    }
+}
+
+.android:hover .android-face {
+    animation: changeEyeColor 4s 0s 2,rotateHead 2s 0s infinite;
+    animation-direction: alternate;
+}
+
+.android:hover .android-lhand {
+    animation: changeEyeColor 4s 0s 2,   leftToRight 1s 0s infinite;
+    animation-direction: alternate;
+}
+
+.android:hover .android-rhand {
+    animation: changeEyeColor 4s 0s 2,  rightToLeft 1s 0s infinite;
+    animation-direction: alternate;
+}
+
+.android:hover .android-lleg {
+    height: 100px;
+    animation: changeEyeColor 4s 0s 2,legLTR 1s 0s infinite;
+    animation-direction: alternate;
+}
+
+.android:hover .android-rleg {
+    height: 100px;
+    animation: changeEyeColor 4s 0s 2,legRTL 1s 0s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes normalColor {
+    0% {
+        background-color: white;
+    } 
+    100% {
+        background-color: white;
+    }
+}
+
+@keyframes rotateHead {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+@keyframes legLTR {
+    0% {
+        transform-origin: top center;
+        transform: rotate(90deg);
+        bottom: 10px;
+    }
+    100% {
+        transform-origin: top center;
+        transform: rotate(0deg);
+        height: 115px;
+    }
+}
+
+
+.android:hover .android-body {
+    animation: changeEyeColor 4s 0s 2,rotateHead 2s 0s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes legRTL {
+    0% {
+        transform-origin: top center;
+        transform: rotate(-90deg);
+        bottom: 10px;
+    } 
+    100% {
+        transform-origin: top center;
+        transform: rotate(0deg);
+        height: 115px;
+    }
+}
+
+
+@keyframes rightToLeft {
+    0% {
+        transform-origin: top center;
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform-origin: top center;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes leftToRight {
+    0% {
+        transform-origin: top center;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform-origin: top center;
+        transform: rotate(180deg);
+    }
+    
+}
+
+/* ANIMATIONS */
 body {
     background-color: black;
+    display: flex;
+    justify-content: center;
+
 }
 
