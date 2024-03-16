@@ -1,0 +1,13 @@
+.android {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.android-face {
+    width: 250px;
+    height: 250px;
+    background-color: chartreuse;
+}
