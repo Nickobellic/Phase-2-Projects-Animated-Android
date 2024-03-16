@@ -206,7 +206,7 @@ transition : => ease (Same Speed) , ease-in (Starting will be slow. Ending will 
         transform: rotate(0deg);
     }
 }
-
+/* */
 @keyframes leftToRight {
     0% {
         transform-origin: top center;
